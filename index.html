@@ -28,6 +28,57 @@
       z-index:-2;
       overflow:hidden;
     }
+    /* كارت اللوجو مع الـ Glow الذهبي */
+.logo-card{
+  width:130px;
+  height:130px;
+  padding:6px;
+  border-radius:30px;
+  background:radial-gradient(circle at 30% 20%, #ffd86b, #f0b01f 55%, #946c11 100%);
+  box-shadow:
+    0 0 26px rgba(255,216,107,.65),
+    0 14px 30px rgba(0,0,0,.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+}
+
+/* الإطار الداخلي الداكن */
+.logo-card-inner{
+  width:100%;
+  height:100%;
+  border-radius:24px;
+  background:#06152a;
+  border:1px solid rgba(255,255,255,.25);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* الصورة نفسها – حواف مستديرة ومليّة الكارت بالكامل */
+.logo-card-inner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;  /* يخلي اللوجو يملأ المساحة بدون تمدد غريب */
+  display:block;
+}
+
+/* تأكيد ترتيب العناصر في الهيرو */
+.hero-text{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+@media (max-width:780px){
+  .hero-text{
+    align-items:center;
+    text-align:center;
+  }
+}
+
     .bg-orbit span{
       position:absolute;
       border-radius:50%;
@@ -355,11 +406,17 @@
 </header>
 
 <main>
-  <div class="hero">
-  <div class="hero-text">
-    <div class="logo-wrap">
+<div class="hero-text">
+  <div class="logo-card">
+    <div class="logo-card-inner">
+      <!-- غيّري اسم الملف mfw-logo.webp لاسم صورة اللوجو عندك -->
       <img src="mfw-logo.webp" alt="MFW Logo">
     </div>
+  </div>
+
+  <h1><span>MFW</span> INVESTMENT &amp; TRADING</h1>
+  <!-- باقي النص والأزرار مثل ما هو -->
+</div>
 
     <h1><span>MFW</span> INVESTMENT &amp; TRADING</h1>
     <h2>شركة متخصصة في الاستثمار والتداول في الأسواق المالية العالمية.</h2>
