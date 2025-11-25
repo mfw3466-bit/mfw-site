@@ -70,8 +70,9 @@
   color:#9fb0d6;
   line-height:1.8;
   font-size:.98rem;
-  margin-bottom:40px;  /* كانت 22 .. خليناها 40 عشان تنزل الأزرار والكارت لتحت */
+  margin-bottom:32px;  /* دي اللي بتنزل الزرين لتحت عن النص */
 }
+
 
 
 @media (max-width:780px){
@@ -225,15 +226,17 @@
       margin-bottom:22px;
     }
 
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:flex-start;
-    }
-    @media(max-width:780px){
-      .hero-actions{justify-content:center;}
-    }
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:flex-start;
+  margin-top:4px;   /* مسافة صغيرة فوق الأزرار */
+}
+@media(max-width:780px){
+  .hero-actions{justify-content:center;}
+}
+
     .btn{
       position:relative;
       border:none;
@@ -272,14 +275,16 @@
       transform:translateY(-1px);
     }
 
-    .hero-side-card{
-      background:rgba(5,18,48,.88);
-      border-radius:26px;
-      padding:20px 18px 22px;
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow:0 18px 40px rgba(0,0,0,.7);
-      backdrop-filter:blur(14px);
-    }
+.hero-side-card{
+  background:rgba(5,18,48,.88);
+  border-radius:26px;
+  padding:20px 18px 22px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 18px 40px rgba(0,0,0,.7);
+  backdrop-filter:blur(14px);
+  margin-top:26px;   /* دي اللي بتنزل الكارت لتحت عن الزرين */
+}
+
     .hero-side-card h3{
       font-size:1.02rem;
       margin-bottom:8px;
